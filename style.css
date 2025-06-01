@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&display=swap');
+
+:root {
+    --primary-bg: #1a0a33; /* Dark purple */
+    --secondary-bg: #2b114d; /* Slightly lighter purple */
+    --accent-yellow: #ffd700;
+    --text-light: #ffffff;
+    --text-dark: #cccccc;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-light);
+    background-color: var(--primary-bg);
+    overflow-x: hidden; /* Prevent horizontal scroll on small overflows */
+    scroll-behavior: smooth;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    /* Min-height ensures content is always visible, adjust as needed */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Allows content to stack vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--primary-bg), var(--secondary-bg));
+    padding: 20px; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width/height */
+    overflow: hidden; /* Keep content within bounds */
+}
+
+.hero-content {
+    z-index: 1;
+    position: relative;
+    width: 100%; /* Take full width within its container */
+    max-width: 1200px; /* Limit max width for very large screens */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo {
+    width: 90%; /* Start with a larger percentage */
+    max-width: 700px; /* Maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space below image */
+    margin: 0 auto 30px auto; /* Center image and add bottom margin */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); /* Subtle glow */
+    border-radius: 10px; /* Slightly rounded corners */
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+    /* If your image has internal transparent padding, you might need to adjust width/max-width */
+}
+
+.hero-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2em, 5vw, 3.5em); /* Responsive font size */
+    margin: 0.2em 0;
+    color: var(--accent-yellow);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+.hero-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3em, 8vw, 5em); /* More responsive font size */
+    margin: 0.1em 0;
+    color: var(--accent-yellow);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+    letter-spacing: 5px;
+}
+
+.hero-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5em, 4vw, 3em); /* More responsive font size */
+    margin: 0.5em 0 0.8em;
+    color: var(--text-light);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: clamp(1em, 2.5vw, 1.5em); /* More responsive font size */
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    max-width: 800px; /* Limit paragraph width for better readability */
+}
+
+.apply-button {
+    display: inline-block;
+    background: linear-gradient(to right, #ffd700, #ffae00);
+    color: var(--primary-bg);
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: clamp(1.2em, 3vw, 1.8em); /* Responsive font size */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+    text-transform: uppercase;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.apply-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.7);
+    background: linear-gradient(to right, #ffae00, #ffd700);
+}
+
+.logos-bottom {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+}
+
+.small-logo {
+    width: clamp(50px, 10vw, 80px); /* Responsive size for small logos */
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+    /* object-fit: contain; /* Good practice for smaller logos too */
+}
+
+.website-link {
+    font-size: clamp(1em, 2vw, 1.2em);
+    margin-top: 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* --- Timeline Section --- */
+.timeline-section {
+    padding: 100px 20px;
+    background-color: var(--secondary-bg);
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initially moved down */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.timeline-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.5em, 5vw, 3.5em);
+    color: var(--accent-yellow);
+    margin-bottom: 60px;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent-yellow);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    z-index: 0; /* Ensure it's behind items */
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit; /* Allows background from parent */
+    width: 50%;
+    box-sizing: border-box;
+    display: flex; /* Use flex to align date and content */
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right for odd items */
+    text-align: right; /* Text alignment for odd items */
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    align-items: flex-start; /* Align content to the left for even items */
+    text-align: left; /* Text alignment for even items */
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px; /* Position on the right side for odd items */
+    background-color: var(--primary-bg);
+    border: 4px solid var(--accent-yellow);
+    top: 25px; /* Adjust vertical position of dot */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -16px; /* Position on the left side for even items */
+    right: auto; /* Reset right property */
+}
+
+.timeline-date {
+    font-size: clamp(1.5em, 3vw, 1.8em);
+    font-weight: bold;
+    color: var(--accent-yellow);
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 90%; /* Prevent content from being too wide */
+    width: fit-content; /* Adjust width to content */
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(255, 215, 0, 0.3);
+}
+
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 768px) {
+    .main-logo {
+        max-width: 500px; /* Adjust max-width for tablets */
+        width: 95%; /* Take more width on smaller screens */
+    }
+
+    .hero-content h1 { font-size: 2.2em; }
+    .hero-content h2 { font-size: 3.8em; }
+    .hero-content h3 { font-size: 1.8em; }
+    .apply-button { padding: 15px 30px; }
+
+    .logos-bottom {
+        gap: 20px; /* Reduce gap on smaller screens */
+    }
+
+    /* Timeline Stacked Layout */
+    .timeline::before {
+        left: 20px; /* Move central line to the left */
+    }
+    .timeline-item {
+        width: 100%; /* Take full width */
+        padding-left: 60px; /* Space for line and dot */
+        padding-right: 15px; /* Right padding */
+        text-align: left; /* All text aligns left */
+        align-items: flex-start; /* All items align left */
+    }
+    .timeline-item::after {
+        left: 13px; /* Align dot with the line */
+        right: auto; /* Reset right property */
+        top: 20px; /* Adjust dot position */
+    }
+    .timeline-item:nth-child(even) {
+        left: 0%; /* Ensure even items stay on the left */
+        padding-left: 60px; /* Consistent padding */
+        padding-right: 15px;
+    }
+    .timeline-item:nth-child(even)::after {
+        left: 13px; /* Ensure dot aligns for even items */
+    }
+    .timeline-content {
+        max-width: 100%; /* Allow content to take full width */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 10px; /* Reduce overall padding on very small screens */
+    }
+    .main-logo {
+        max-width: 95%; /* Even more width on small phones */
+        margin-bottom: 20px;
+    }
+    .hero-content h1 { font-size: 1.8em; }
+    .hero-content h2 { font-size: 2.8em; }
+    .hero-content h3 { font-size: 1.3em; }
+    .apply-button {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+    .logos-bottom {
+        flex-direction: column; /* Stack logos vertically */
+        gap: 15px;
+    }
+    .small-logo {
+        width: 45px;
+    }
+
+    .timeline-section {
+        padding: 60px 15px; /* Reduce padding for timeline on small screens */
+    }
+    .timeline-section h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+    .timeline-date {
+        font-size: 1.3em;
+    }
+    .timeline-content {
+        padding: 15px 20px;
+        font-size: 1em;
+    }
+}
