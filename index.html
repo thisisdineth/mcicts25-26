@@ -3,49 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahana College ICT Society - Board of Officials 2025/2026</title>
+    <title>Tech Scope - Elevate Your Skills</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero-section">
-        <div class="hero-content">
-            <img src="./img/As we turn the page to a new chapter, we welcome 2025 with hearts full of ambition and minds ready to innovate. This year promises to be a canvas of boundless opportunities, groundbreaking ideas, and inspiring moments that will shape the fu.jpg" alt="Mahana College ICT Society Logo" class="main-logo">
-            <h1>Mahana College ICT Society</h1>
-            <h2>2025 / 2026</h2>
-            <h3>BOARD OF OFFICIALS</h3>
-            <p>REGISTRATIONS OPEN</p>
-            <a href="https://forms.gle/UviEdiT2BKkSorjt7" class="apply-button">APPLY NOW</a>
-            <div class="logos-bottom">
-                <img src="./img/Transparent BG (White Letters) NE.png" alt="MCDCTS Logo" class="small-logo">
-                <img src="./img/MC LOGO FINAL.png" alt="College Logo" class="small-logo">
-            </div>
-            <p class="website-link">mciicts.lk</p>
-        </div>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <header class="main-header">
+        <div class="logo">TECH SCOPE | MCICTS</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#register">Register</a>
+        </nav>
     </header>
 
-    <section id="timeline-section" class="timeline-section">
-        <div class="container">
-            <h2>Timeline of New Board Process</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">June 10</div>
-                    <div class="timeline-content">Registrations Close</div>
+    <main>
+        <section class="hero">
+            <div class="planet-container">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/141225/planet.png" alt="Planet" class="planet">
+            </div>
+            <div class="hero-content">
+                <div class="text-box animate-on-scroll">
+                    <div class="arrow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.59L6.41 12 5 13.41 11.59 20 19 12.41 17.59 11 11 17.59z"/></svg>
+                    </div>
+                    <h1>Become a Pro in Coding and Hardware.</h1>
+                    <p>Unlock your potential and elevate your skills to the next level!</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">June 11-13</div>
-                    <div class="timeline-content">Interviews</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">June 16</div>
-                    <div class="timeline-content">Announcement of New Members</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">June 17</div>
-                    <div class="timeline-content">New Member Introduction Gathering Meeting</div>
+                <div class="cta-container animate-on-scroll">
+                    <h2>Elevate Your Skills</h2>
+                    <a href="#register" class="cta-button">Register Now!</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="features" class="features-section">
+            <h2 class="section-title animate-on-scroll">What You Will Master</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <h3>🚀 Front-End Development</h3>
+                    <p>Build stunning, responsive user interfaces with HTML, CSS, and JavaScript frameworks like React and Vue.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <h3>⚙️ Back-End Engineering</h3>
+                    <p>Develop robust server-side applications, APIs, and databases using technologies like Node.js, Python, and SQL.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <h3>🤖 Hardware & IoT</h3>
+                    <p>Dive into the world of microcontrollers, sensors, and build your own Internet of Things devices from scratch.</p>
+                </div>
+                 <div class="feature-card animate-on-scroll">
+                    <h3>🧠 AI & Machine Learning</h3>
+                    <p>Explore the frontiers of artificial intelligence and learn to build models that can learn, predict, and reason.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="register-section">
+             <h2 class="section-title animate-on-scroll">Join The Program</h2>
+            <form class="register-form animate-on-scroll">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="form-group">
+                    <select id="interest" name="interest" required>
+                        <option value="" disabled selected>Select Your Interest</option>
+                        <option value="frontend">Front-End Development</option>
+                        <option value="backend">Back-End Engineering</option>
+                        <option value="hardware">Hardware & IoT</option>
+                        <option value="ai">AI & Machine Learning</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Secure Your Spot</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tech Scope. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

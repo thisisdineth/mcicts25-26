@@ -1,16 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const timelineSection = document.getElementById('timeline-section');
+document.addEventListener('DOMContentLoaded', () => {
 
-    const observer = new IntersectionObserver(entries => {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                timelineSection.classList.add('visible');
-                observer.unobserve(timelineSection); // Stop observing once visible
+                entry.target.classList.add('is-visible');
+                // Optional: Unobserve after animation to save resources
+                // observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.2 // Trigger when 20% of the section is visible
+        root: null, // observes intersections relative to the viewport
+        rootMargin: '0px',
+        threshold: 0.1 // triggers when 10% of the element is visible
     });
 
-    observer.observe(timelineSection);
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
 });
