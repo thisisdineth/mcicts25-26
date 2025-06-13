@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Noto+Sans+Sinhala:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,84 +16,171 @@
     <div id="stars3"></div>
 
     <header class="main-header">
-        <div class="logo">TECH SCOPE | MCICTS</div>
+        <div class="logo">
+            <span class="lang-en">TECH SCOPE | MCICTS</span>
+            <span class="lang-si hidden">TECH SCOPE | MCICTS</span>
+        </div>
         <nav>
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="#register">Register</a>
+            <a href="#about"><span class="lang-en">About</span><span class="lang-si hidden">පිළිබඳව</span></a>
+            <a href="#courses"><span class="lang-en">Courses</span><span class="lang-si hidden">පාඨමාලා</span></a>
+            <a href="#" id="register-nav-link"><span class="lang-en">Register</span><span class="lang-si hidden">ලියාපදිංචි වන්න</span></a>
+            <button id="lang-toggle-btn">සිංහල</button>
         </nav>
     </header>
 
     <main>
         <section class="hero">
             <div class="planet-container">
-                <img src="./img/3dplnt2.png" alt="Planet" class="planet">
+                <img src="./img/3dplant Background Removed.png" alt="Planet" class="planet">
             </div>
             <div class="hero-content">
                 <div class="text-box animate-on-scroll">
                     <div class="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.59L6.41 12 5 13.41 11.59 20 19 12.41 17.59 11 11 17.59z"/></svg>
                     </div>
-                    <h1>Become a Pro in Coding and Hardware.</h1>
-                    <p>Unlock your potential and elevate your skills to the next level!</p>
+                    <h1>
+                        <span class="lang-en">Become a Pro in Coding and Hardware.</span>
+                        <span class="lang-si hidden">කේතීකරණය සහ දෘඪාංග පිළිබඳව විශේෂ දක්ෂයෙකු වන්න.</span>
+                    </h1>
+                    <p>
+                        <span class="lang-en">Unlock your potential and elevate your skills to the next level!</span>
+                        <span class="lang-si hidden">ඔබේ හැකියාවන් වර්ධනය කර, ඔබගේ කුසලතා ඉහළම මට්ටමකට ගෙන යන්න!</span>
+                    </p>
                 </div>
                 <div class="cta-container animate-on-scroll">
-                    <h2>Elevate Your Skills</h2>
-                    <a href="#register" class="cta-button">Register Now!</a>
+                    <h2>
+                        <span class="lang-en">Tech Scope Level 1</span>
+                        <span class="lang-si hidden">Tech Scope level 1</span>
+                    </h2>
+                    <button class="cta-button" id="register-hero-btn">
+                        <span class="lang-en">Register Now!</span>
+                        <span class="lang-si hidden">දැන්ම ලියාපදිංචි වන්න!</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="features-section">
-            <h2 class="section-title animate-on-scroll">What You Will Master</h2>
-            <div class="features-grid">
-                <div class="feature-card animate-on-scroll">
-                    <h3>🚀 Front-End Development</h3>
-                    <p>Build stunning, responsive user interfaces with HTML, CSS, and JavaScript frameworks like React and Vue.</p>
+        <section id="about" class="content-section animate-on-scroll">
+            <h2 class="section-title">
+                <span class="lang-en">About TechScope</span>
+                <span class="lang-si hidden">TechScope පිළිබඳව</span>
+            </h2>
+            <p class="about-text">
+                <span class="lang-en">TechScope is a coding and digital innovation-focused training program by the Mahanama College ICTS, designed to provide students with structured, hands-on training in both software and hardware technologies. Our purpose is to expand on traditional ICT training by developing practical skills, critical thinking, and problem-solving abilities. We aim to foster technical skills, creativity, and teamwork among participants, inspiring innovation and building a strong foundation for future careers in technology.</span>
+                <span class="lang-si hidden">TechScope යනු මහානාම විද්‍යාලයීය තොරතුරු හා සන්නිවේදන තාක්ෂණ සංගමය (MCICTS) විසින් මෙහෙයවනු ලබන, මෘදුකාංග සහ දෘඪාංග තාක්ෂණයන් පිළිබඳව සිසුන්ට ව්‍යුහගත, ප්‍රායෝගික පුහුණුවක් ලබා දීම සඳහා නිර්මාණය කරන ලද කේතීකරණ සහ ඩිජිටල් නවෝත්පාදන වැඩසටහනකි. අපගේ අරමුණ වන්නේ ප්‍රායෝගික කුසලතා, විවේචනාත්මක චින්තනය සහ ගැටළු විසඳීමේ හැකියාවන් වර්ධනය කිරීම මගින් සාම්ප්‍රදායික තොරතුරු තාක්ෂණ පුහුණුව පුළුල් කිරීමයි. මෙමගින් තාක්ෂණික කුසලතා, නිර්මාණශීලිත්වය සහ කණ්ඩායම් හැඟීම වර්ධනය කර, තාක්ෂණික අනාගත වෘත්තීන් සඳහා ශක්තිමත් පදනමක් ගොඩනැගීම අපගේ ඉලක්කයයි.</span>
+            </p>
+        </section>
+        
+        <section id="courses" class="content-section">
+            <h2 class="section-title animate-on-scroll">
+                <span class="lang-en">Course Structures</span>
+                <span class="lang-si hidden">පාඨමාලා ව්‍යුහය</span>
+            </h2>
+            <div class="course-grid">
+                <div class="course-card animate-on-scroll">
+                    <h3>
+                        <span class="lang-en">Code Craft Team (Web & Software)</span>
+                        <span class="lang-si hidden">Code Team (වෙබ් සහ මෘදුකාංග)</span>
+                    </h3>
+                    <ul class="syllabus-list">
+                        <li><strong><span class="lang-en">Week 1:</span><span class="lang-si hidden">සතිය 1:</span></strong> <span class="lang-en">Intro to Programming, Digital Safety & Tools Setup</span><span class="lang-si hidden">වැඩසටහන්කරණය, Syber ආරක්ෂාව සහ මෙවලම් පිහිටුවීම</span></li>
+                        <li><strong><span class="lang-en">Week 2:</span><span class="lang-si hidden">සතිය 2:</span></strong> <span class="lang-en">HTML & CSS Basics</span><span class="lang-si hidden">HTML සහ CSS මූලිකාංග</span></li>
+                        <li><strong><span class="lang-en">Week 3:</span><span class="lang-si hidden">සතිය 3:</span></strong> <span class="lang-en">JavaScript Introduction & DOM Manipulation</span><span class="lang-si hidden">JavaScript හැඳින්වීම සහ DOM හැසිරවීම</span></li>
+                        <li><strong><span class="lang-en">Week 4:</span><span class="lang-si hidden">සතිය 4:</span></strong> <span class="lang-en">Git & GitHub for Version Control</span><span class="lang-si hidden">Git සහ GitHub භාවිතය</span></li>
+                        <li><strong><span class="lang-en">Week 5:</span><span class="lang-si hidden">සතිය 5:</span></strong> <span class="lang-en">Firebase for Hosting, Database & Auth</span><span class="lang-si hidden">Firebase: වෙබ් Hosting, දත්ත සමුදාය</span></li>
+                        <li><strong><span class="lang-en">Week 6:</span><span class="lang-si hidden">සතිය 6:</span></strong> <span class="lang-en">CMS Tools (WordPress & Joomla)</span><span class="lang-si hidden">CMS මෙවලම් (WordPress සහ Joomla)</span></li>
+                        <li><strong><span class="lang-en">Week 7:</span><span class="lang-si hidden">සතිය 7:</span></strong> <span class="lang-en">Design with Photoshop & AI Tools</span><span class="lang-si hidden">Photoshop සහ AI මෙවලම් සමඟ නිර්මාණය</span></li>
+                        <li><strong><span class="lang-en">Week 8:</span><span class="lang-si hidden">සතිය 8:</span></strong> <span class="lang-en">SEO & Web Optimization</span><span class="lang-si hidden">SEO සහ වෙබ් ප්‍රශස්තකරණය</span></li>
+                        <li><strong><span class="lang-en">Week 9:</span><span class="lang-si hidden">සතිය 9:</span></strong> <span class="lang-en">Personal Portfolio Development</span><span class="lang-si hidden">පෞද්ගලික Portfolio නිර්මාණය</span></li>
+                        <li><strong><span class="lang-en">Week 10:</span><span class="lang-si hidden">සතිය 10:</span></strong> <span class="lang-en">Professional Networking & Content Strategy</span><span class="lang-si hidden">වෘත්තීය ජාලකරණය සහ අන්තර්ගත උපායමාර්ග</span></li>
+                        <li><strong><span class="lang-en">Week 11:</span><span class="lang-si hidden">සතිය 11:</span></strong> <span class="lang-en">Advanced Deployment (DNS, cPanel)</span><span class="lang-si hidden">උසස් වෙබ් යෙදවීම (DNS, cPanel)</span></li>
+                        <li><strong><span class="lang-en">Week 12:</span><span class="lang-si hidden">සතිය 12:</span></strong> <span class="lang-en">Final Showcase & Certificate</span><span class="lang-si hidden">අවසාන ව්‍යාපෘතිය සමග වටිනා සහතිකය</span></li>
+                    </ul>
                 </div>
-                <div class="feature-card animate-on-scroll">
-                    <h3>⚙️ Back-End Engineering</h3>
-                    <p>Develop robust server-side applications, APIs, and databases using technologies like Node.js, Python, and SQL.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <h3>🤖 Hardware & IoT</h3>
-                    <p>Dive into the world of microcontrollers, sensors, and build your own Internet of Things devices from scratch.</p>
-                </div>
-                 <div class="feature-card animate-on-scroll">
-                    <h3>🧠 AI & Machine Learning</h3>
-                    <p>Explore the frontiers of artificial intelligence and learn to build models that can learn, predict, and reason.</p>
+                <div class="course-card animate-on-scroll">
+                    <h3>
+                        <span class="lang-en">Hardware & Practical use</span>
+                        <span class="lang-si hidden">Hardware & Practical use</span>
+                    </h3>
+                    <ul class="syllabus-list">
+                        <li><strong><span class="lang-en">Week 1:</span><span class="lang-si hidden">සතිය 1:</span></strong> <span class="lang-en">Intro to Computers, Lab Safety & Component ID</span><span class="lang-si hidden">පරිගණක හැඳින්වීම, විද්‍යාගාර ආරක්ෂාව</span></li>
+                        <li><strong><span class="lang-en">Week 2:</span><span class="lang-si hidden">සතිය 2:</span></strong> <span class="lang-en">Core Components (Motherboard, CPU, RAM)</span><span class="lang-si hidden">මූලික උපාංග (මවු පුවරුව, CPU, RAM)</span></li>
+                        <li><strong><span class="lang-en">Week 3:</span><span class="lang-si hidden">සතිය 3:</span></strong> <span class="lang-en">Storage (HDD/SSD) & Peripherals</span><span class="lang-si hidden">ගබඩා උපාංග (HDD/SSD) සහ පර්යන්ත</span></li>
+                        <li><strong><span class="lang-en">Week 4:</span><span class="lang-si hidden">සතිය 4:</span></strong> <span class="lang-en">OS Installation (Windows & Linux)</span><span class="lang-si hidden">මෙහෙයුම් පද්ධති ස්ථාපනය</span></li>
+                        <li><strong><span class="lang-en">Week 5:</span><span class="lang-si hidden">සතිය 5:</span></strong> <span class="lang-en">OS Fundamentals & File Management</span><span class="lang-si hidden">මෙහෙයුම් පද්ධති මූලධර්ම සහ ගොනු කළමනාකරණය</span></li>
+                        <li><strong><span class="lang-en">Week 6:</span><span class="lang-si hidden">සතිය 6:</span></strong> <span class="lang-en">Networking Basics (IPv4, DNS, DHCP)</span><span class="lang-si hidden">ජාලකරණ මූලිකාංග</span></li>
+                        <li><strong><span class="lang-en">Week 7:</span><span class="lang-si hidden">සතිය 7:</span></strong> <span class="lang-en">Network Devices (Switches, Routers) & Config</span><span class="lang-si hidden">ජාල උපාංග සහ වින්‍යාස කිරීම</span></li>
+                        <li><strong><span class="lang-en">Week 8:</span><span class="lang-si hidden">සතිය 8:</span></strong> <span class="lang-en">Software Tools & Troubleshooting</span><span class="lang-si hidden">මෘදුකාංග මෙවලම් සහ දෝෂ නිරාකරණය</span></li>
+                        <li><strong><span class="lang-en">Week 9:</span><span class="lang-si hidden">සතිය 9:</span></strong> <span class="lang-en">Scripting & Automation Fundamentals</span><span class="lang-si hidden">ස්ක්‍රිප්ටින් සහ ස්වයංක්‍රීයකරණය</span></li>
+                        <li><strong><span class="lang-en">Week 10:</span><span class="lang-si hidden">සතිය 10:</span></strong> <span class="lang-en">Cybersecurity Essentials</span><span class="lang-si hidden">සයිබර් ආරක්ෂණ මූලිකාංග</span></li>
+                        <li><strong><span class="lang-en">Week 11:</span><span class="lang-si hidden">සතිය 11:</span></strong> <span class="lang-en">Virtualization & Cloud Introduction</span><span class="lang-si hidden">Virtualization සහ Cloud හැඳින්වීම</span></li>
+                        <li><strong><span class="lang-en">Week 12:</span><span class="lang-si hidden">සතිය 12:</span></strong> <span class="lang-en">Final Showcase & Certificate</span><span class="lang-si hidden">අවසාන ව්‍යාපෘතිය සමග වටිනා සහතිකය</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="register" class="register-section">
-             <h2 class="section-title animate-on-scroll">Join The Program</h2>
-            <form class="register-form animate-on-scroll">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">Full Name</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">Email Address</label>
-                </div>
-                <div class="form-group">
-                    <select id="interest" name="interest" required>
-                        <option value="" disabled selected>Select Your Interest</option>
-                        <option value="frontend">Front-End Development</option>
-                        <option value="backend">Back-End Engineering</option>
-                        <option value="hardware">Hardware & IoT</option>
-                        <option value="ai">AI & Machine Learning</option>
-                    </select>
-                </div>
-                <button type="submit" class="submit-button">Secure Your Spot</button>
-            </form>
+        <section id="partners" class="content-section">
+            <h2 class="section-title animate-on-scroll">
+                <span class="lang-en">Project By</span>
+                <span class="lang-si hidden">Project By</span>
+            </h2>
+            <div class="partners-grid animate-on-scroll">
+                <div class="partner-logo"><img src="./img/MC LOGO FINAL.png" alt="Partner 1"></div>
+                <div class="partner-logo"><img src="./img/Transparent BG (White Letters) NE.png" alt="Partner 2"></div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Tech Scope. All rights reserved.</p>
+        <p>
+            <span class="lang-en">&copy; 2025 Tech Scope by MCICTS. All rights reserved.</span>
+            <span class="lang-si hidden">&copy; 2025 Tech Scope by MCICTS. සියලුම හිමිකම් ඇවිරිණි.</span>
+        </p>
     </footer>
+
+    <div id="lightbox-overlay" class="hidden"></div>
+    <div id="lightbox-modal" class="hidden">
+        <button id="close-lightbox-btn">&times;</button>
+        <h2>
+            <span class="lang-en">Registration Information</span>
+            <span class="lang-si hidden">ලියාපදිංචි වීමේ තොරතුරු</span>
+        </h2>
+        
+        <div class="lightbox-content">
+            <h3>
+                <span class="lang-en">About the Program</span>
+                <span class="lang-si hidden">වැඩසටහන පිළිබඳව</span>
+            </h3>
+            <p>
+                <span class="lang-en">This program is designed for students of Mahanama College in two categories: a Senior Category for Grade 10 and above, and a Junior Category for Grades 8 to 10. We aim to foster technical skills, creativity, and teamwork through hands-on projects.</span>
+                <span class="lang-si hidden">මෙම වැඩසටහන මහානාම විද්‍යාලයේ සිසුන් සඳහා කාණ්ඩ දෙකකින් නිර්මාණය කර ඇත: 10 ශ්‍රේණිය සහ ඊට ඉහළ සිසුන් සඳහා ජ්‍යෙෂ්ඨ කාණ්ඩය, සහ 8 සිට 10 ශ්‍රේණිය දක්වා සිසුන් සඳහා කනිෂ්ඨ කාණ්ඩය. ප්‍රායෝගික ව්‍යාපෘති හරහා තාක්ෂණික කුසලතා, නිර්මාණශීලිත්වය සහ කණ්ඩායම් හැඟීම වර්ධනය කිරීම අපගේ අරමුණයි.</span>
+            </p>
+
+            <h3>
+                <span class="lang-en">Requirements & Selection Process</span>
+                <span class="lang-si hidden">සුදුසුකම් සහ තෝරා ගැනීමේ ක්‍රියාවලිය</span>
+            </h3>
+            <p>
+                <span class="lang-en">Selection is conducted through a two-level online quiz process:</span>
+                <span class="lang-si hidden">තෝරා ගැනීම අදියර දෙකක මාර්ගගත (online) ප්‍රශ්න විචාරාත්මක ක්‍රියාවලියක් හරහා සිදු කෙරේ:</span>
+            </p>
+            <ul>
+                <li><span class="lang-en"><strong>Level 1:</strong> An open quiz with 30 questions covering basic ICT, programming logic, and the O/L syllabus. Participants scoring over 20 marks will be shortlisted.</span><span class="lang-si hidden"><strong>පළමු අදියර:</strong> මූලික ICT දැනුම, ක්‍රමලේඛන තර්කනය සහ අ.පො.ස. (සා/පෙළ) විෂය නිර්දේශය ආවරණය වන පරිදි ප්‍රශ්න 30කින් සමන්විත විවෘත ප්‍රශ්නාවලියකි. ලකුණු 20කට වඩා ලබා ගන්නා සහභාගිවන්නන් මීළඟ අදියර සඳහා තෝරා ගැනේ.</span></li>
+                <li><span class="lang-en"><strong>Level 2:</strong> Shortlisted candidates will take a second, separate online quiz for their specific age group.</span><span class="lang-si hidden"><strong>දෙවන අදියර:</strong> තෝරාගත් අපේක්ෂකයින් ඔවුන්ගේ වයස් කාණ්ඩයට අදාළව දෙවන, වෙනම මාර්ගගත ප්‍රශ්නාවලියකට සහභාගී විය යුතුය.</span></li>
+                <li><span class="lang-en"><strong>Final Selection:</strong> The top 20 students from each category will be selected for the training program.</span><span class="lang-si hidden"><strong>අවසාන තේරීම:</strong> එක් එක් කාණ්ඩයෙන් ඉහළම ලකුණු ලබා ගන්නා සිසුන් 20 දෙනා පුහුණු වැඩසටහන සඳහා තෝරාගනු ලැබේ.</span></li>
+            </ul>
+            <p>
+                <span class="lang-en">By proceeding, you acknowledge these requirements.</span>
+                <span class="lang-si hidden">ඉදිරියට යාමෙන්, ඔබ මෙම අවශ්‍යතාවයන් පිළිගන්නා බවට එකඟ වේ.</span>
+            </p>
+        </div>
+        
+        <a href="https://docs.google.com/forms/" class="cta-button" target="_blank" id="google-form-link">
+            <span class="lang-en">Proceed to Registration</span>
+            <span class="lang-si hidden">ලියාපදිංචිය සඳහා ඉදිරියට යන්න</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>
